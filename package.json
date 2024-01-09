@@ -1,6 +1,6 @@
 {
   "name": "jsonata-functions",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "index.mjs",
   "scripts": {
     "test": "node ./node_modules/mocha/bin/mocha.js --ui tdd --recursive 'tests/*.test.mjs'",
