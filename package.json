@@ -1,6 +1,6 @@
 {
   "name": "jsonata-functions",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "homepage": "https://github.com/the-fittest/jsonata-functions",
   "main": "lib/functions.mjs",
   "description": "A collection of jsonata functions",
@@ -13,10 +13,15 @@
     "test": "node ./node_modules/mocha/bin/mocha.js --ui tdd --recursive 'tests/*.test.mjs'",
     "dev": "nodemon ./node_modules/mocha/bin/mocha.js --ui tdd --recursive 'tests/*.test.mjs'"
   },
+  "exports": {
+    "import": "./lib/functions.mjs",
+    "require": "./lib/functions.cjs"
+  },
   "devDependencies": {
     "chai": "^4.3.10",
     "mocha": "^10.2.0",
-    "nodemon": "^3.0.2"
+    "nodemon": "^3.0.2",
+    "rollup": "^4.9.4"
   },
   "dependencies": {
     "jsonata": "^2.0.3",
@@ -29,6 +34,10 @@
     "yarn": "^1.22.19"
   },
   "keywords": [
-    "jsonata","moment","lodash","uuid","momentjs"
+    "jsonata",
+    "moment",
+    "lodash",
+    "uuid",
+    "momentjs"
   ]
 }
