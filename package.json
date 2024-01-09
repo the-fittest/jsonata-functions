@@ -1,8 +1,14 @@
 {
   "name": "jsonata-functions",
   "version": "0.2.0",
+  "homepage": "https://github.com/the-fittest/jsonata-functions",
   "main": "lib/functions.mjs",
+  "description": "A collection of jsonata functions",
   "license": "MIT",
+  "author": {
+    "name": "Alex Jäger",
+    "email": "alexander.jaeger@the-fittest.de"
+  },
   "scripts": {
     "test": "node ./node_modules/mocha/bin/mocha.js --ui tdd --recursive 'tests/*.test.mjs'",
     "dev": "nodemon ./node_modules/mocha/bin/mocha.js --ui tdd --recursive 'tests/*.test.mjs'"
@@ -21,5 +27,8 @@
   "engines": {
     "node": "^18.17.1",
     "yarn": "^1.22.19"
-  }
+  },
+  "keywords": [
+    "jsonata","moment","lodash","uuid","momentjs"
+  ]
 }
