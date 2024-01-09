@@ -6,7 +6,7 @@ const data = {
 };
 
 (async () => {
-  let expression = jsonata('$_camelCase($.text)', {});
+  let expression = jsonata(`{'name': $_camelCase($.text), 'id': $uuidV4()}`, {});
   expression = functions(expression);
   const result = await expression.evaluate(data);
   console.log(result);

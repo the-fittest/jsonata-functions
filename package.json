@@ -1,6 +1,6 @@
 {
   "name": "jsonata-functions",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "homepage": "https://github.com/the-fittest/jsonata-functions",
   "main": "lib/functions.mjs",
   "description": "A collection of jsonata functions",
