@@ -7,7 +7,10 @@ A small library that adds lodash and moment to jsonata
 
 `npm install jsonata-functions`
 
+`yarn add jsonata-functions`
 ## Usage
+
+To use lodash and moment functions in jsonata, you can do the following:
 
     import jsonata from "jsonata";
     import functions from "jsonata-functions";
@@ -25,10 +28,23 @@ A small library that adds lodash and moment to jsonata
 
 Output should be `blaBlaBla`
 
+To only use lodash functions, you can do the following:
+
+    import jsonata from "jsonata";
+    import lodash from "jsonata-functions";
+
+    const data = {
+        text: "bla bla bla"
+    };
+
+    (async () => {
+        let expression = jsonata('$_camelCase($.text)', {});
+        expression = lodash(expression, { moment: false });
+        const result = await expression.evaluate(data);
+        console.log(result);
+    })()
+
 ## Tests
 
 `npm test`
 
-## Contributing
-
-In lieu of a formal style guide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code.
