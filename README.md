@@ -1,4 +1,4 @@
-Number Formatter
+Jsonata Functions
 =========
 
 A small library that adds lodash and moment to jsonata
@@ -48,3 +48,22 @@ To only use lodash functions, you can do the following:
 
 `npm test`
 
+## Publishing
+
+1. make changes...
+
+2. `git add [changes]`
+
+3. `git commit -m "[message]"`
+
+4. `git tag v[version]`
+
+5. `git push origin v[version]`
+
+6. change version in `package.json`
+
+7. `npm publish`
+
+## Goodbyes
+
+May the love be with you!
