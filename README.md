@@ -52,17 +52,17 @@ To only use lodash functions, you can do the following:
 
 1. make changes...
 
-2. `git add [changes]`
+1. `git add [changes]`
 
-3. `git commit -m "[message]"`
+1. change version in `package.json`
 
-4. `git tag v[version]`
+1. `git commit -m "[message]"`
 
-5. `git push origin v[version]`
+1. `git tag v[version]`
 
-6. change version in `package.json`
+1. `git push origin v[version]`
 
-7. `npm publish`
+1. `npm publish`
 
 ## Goodbyes
 
