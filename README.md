@@ -1,7 +1,7 @@
 Jsonata Functions
 =========
 
-A small library that adds lodash and moment to jsonata
+A small library that adds lodash, moment and uuid to jsonata
 
 ## Installation
 
