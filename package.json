@@ -11,7 +11,8 @@
   },
   "scripts": {
     "test": "node ./node_modules/mocha/bin/mocha.js --ui tdd --recursive 'tests/*.test.mjs'",
-    "dev": "nodemon ./node_modules/mocha/bin/mocha.js --ui tdd --recursive 'tests/*.test.mjs'"
+    "dev": "nodemon ./node_modules/mocha/bin/mocha.js --ui tdd --recursive 'tests/*.test.mjs'",
+    "convert": "npx rollup ./lib/functions.mjs --file ./lib/functions.cjs --format cjs"
   },
   "exports": {
     "import": "./lib/functions.mjs",
