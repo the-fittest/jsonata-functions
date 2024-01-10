@@ -1,8 +1,8 @@
 {
   "name": "jsonata-functions",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "homepage": "https://github.com/the-fittest/jsonata-functions",
-  "main": "lib/functions.mjs",
+  "main": "lib/functions.js",
   "description": "A collection of jsonata functions",
   "license": "MIT",
   "author": {
@@ -11,18 +11,12 @@
   },
   "scripts": {
     "test": "node ./node_modules/mocha/bin/mocha.js --ui tdd --recursive 'tests/*.test.mjs'",
-    "dev": "nodemon ./node_modules/mocha/bin/mocha.js --ui tdd --recursive 'tests/*.test.mjs'",
-    "convert": "npx rollup ./lib/functions.mjs --file ./lib/functions.cjs --format cjs"
-  },
-  "exports": {
-    "import": "./lib/functions.mjs",
-    "require": "./lib/functions.cjs"
+    "dev": "./node_modules/.bin/nodemon ./node_modules/mocha/bin/mocha.js --ui tdd --recursive 'tests/*.test.mjs'"
   },
   "devDependencies": {
     "chai": "^4.3.10",
     "mocha": "^10.2.0",
-    "nodemon": "^3.0.2",
-    "rollup": "^4.9.4"
+    "nodemon": "^3.0.2"
   },
   "dependencies": {
     "jsonata": "^2.0.3",

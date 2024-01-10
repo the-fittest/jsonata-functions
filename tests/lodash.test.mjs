@@ -1,6 +1,6 @@
 import {describe, test} from "mocha";
 import jsonata from "jsonata";
-import functions from "../lib/functions.mjs";
+import functions from "../lib/functions.js";
 import {expect} from "chai";
 
 

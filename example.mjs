@@ -1,5 +1,5 @@
 import jsonata from "jsonata";
-import functions from "./lib/functions.mjs";
+import functions from "./lib/functions.js";
 
 const data = {
   text: "bla bla bla"

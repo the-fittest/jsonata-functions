@@ -1,5 +1,5 @@
 const jsonata = require("jsonata");
-const functions = require("./lib/functions.cjs");
+const functions = require("./lib/functions.js");
 
 const data = {
   text: "bla bla bla"

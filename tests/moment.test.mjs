@@ -1,7 +1,7 @@
 import {describe, test} from "mocha";
 import {expect} from "chai";
 import jsonata from "jsonata";
-import functions from "../lib/functions.mjs";
+import functions from "../lib/functions.js";
 
 const evaluate = async (expression, data) => {
   let expr = jsonata(expression, {});
@@ -13,18 +13,18 @@ describe('Moment Test Suite', () => {
 
   test('moment format 001', async () => {
     const evaluated = await evaluate(
-      '$moment($.date).format("YYYY-MM-DD")',
-      {date: "2024-01-08"}
+      `$moment($.date, "DD.MM.YYYY").format("YYYY-MM-DD")`,
+      {date: "08.02.1980"}
     );
-    expect(evaluated).to.eql('2024-01-08');
+    expect(evaluated).to.eql('1980-02-08');
   });
 
-  test('moment calendar 001', async () => {
+  test('moment format 002', async () => {
     const evaluated = await evaluate(
-      "$moment($.date).subtract(10, 'days').calendar()",
-      {date: "2024-01-08"}
+      `$moment($.date, "DD.MM.YYYY").subtract(10, 'days').format("YYYY-MM-DD")`,
+      {date: "08.02.1980"}
     );
-    expect(evaluated).to.eql('12/29/2023');
+    expect(evaluated).to.eql('1980-01-29');
   });
 
 });

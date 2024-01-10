@@ -1,7 +1,7 @@
 import {describe, test} from "mocha";
 import {expect} from "chai";
 import jsonata from "jsonata";
-import functions from "../lib/functions.mjs";
+import functions from "../lib/functions.js";
 import { validate as uuidValidate } from 'uuid';
 
 
