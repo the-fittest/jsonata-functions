@@ -1,6 +1,6 @@
 {
   "name": "jsonata-functions",
-  "version": "0.2.3",
+  "version": "0.3.2",
   "homepage": "https://github.com/the-fittest/jsonata-functions",
   "main": "lib/functions.js",
   "description": "A collection of jsonata functions",
@@ -11,7 +11,7 @@
   },
   "scripts": {
     "test": "node ./node_modules/mocha/bin/mocha.js --ui tdd --recursive 'tests/*.test.mjs'",
-    "dev": "./node_modules/.bin/nodemon ./node_modules/mocha/bin/mocha.js --ui tdd --recursive 'tests/*.test.mjs'"
+    "dev": "nodemon ./node_modules/mocha/bin/mocha.js --ui tdd --recursive 'tests/*.test.mjs'"
   },
   "devDependencies": {
     "chai": "^4.3.10",
