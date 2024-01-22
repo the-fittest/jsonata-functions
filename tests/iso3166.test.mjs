@@ -1,13 +1,7 @@
 import {describe, test} from "mocha";
-import jsonata from "jsonata";
-import functions from "../lib/functions.js";
+import {evaluate} from "./utils/evaluate.mjs";
 import {expect} from "chai";
 
-const evaluate = async (expression, data) => {
-  let expr = jsonata(expression, {});
-  expr = functions(expr);
-  return expr.evaluate(data);
-}
 
 describe('iso3166 Test Suite', () => {
 

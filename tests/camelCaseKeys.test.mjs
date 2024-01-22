@@ -1,14 +1,6 @@
 import {describe, test} from "mocha";
-import jsonata from "jsonata";
-import functions from "../lib/functions.js";
 import {expect} from "chai";
-
-
-const evaluate = async (expression, data) => {
-  let expr = jsonata(expression, {});
-  expr = functions(expr);
-  return expr.evaluate(data);
-}
+import {evaluate} from "./utils/evaluate.mjs";
 
 describe('camelCaseKeys Test Suite', () => {
 

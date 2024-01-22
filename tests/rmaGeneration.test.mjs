@@ -1,16 +1,9 @@
 import {describe, test} from "mocha";
 import {expect} from "chai";
-import jsonata from "jsonata";
-import functions from "../lib/functions.js";
 import _ from "lodash";
 import moment from "moment";
 
-const evaluate = async (expression, data) => {
-  let expr = jsonata(expression, {});
-  expr = functions(expr);
-  return expr.evaluate(data);
-}
-
+import {evaluate} from "./utils/evaluate.mjs";
 describe('rmaGeneration Test Suite', () => {
 
   test('rmaGeneration 001', async () => {

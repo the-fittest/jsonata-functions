@@ -1,16 +1,7 @@
 import {describe, test} from "mocha";
 import {expect} from "chai";
-import jsonata from "jsonata";
-import functions from "../lib/functions.js";
-import { validate as uuidValidate } from 'uuid';
-
-
-
-const evaluate = async (expression, data) => {
-  let expr = jsonata(expression, {});
-  expr = functions(expr);
-  return expr.evaluate(data);
-}
+import {validate as uuidValidate} from 'uuid';
+import {evaluate} from "./utils/evaluate.mjs";
 
 describe('Uuid Test Suite', () => {
 
@@ -28,15 +19,17 @@ describe('Uuid Test Suite', () => {
       '$uuidParse($.id)',
       {id: "00000000-0000-0000-0000-000000000000"}
     );
-    expect(evaluated).to.eql(Uint8Array.from([0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0 ,0 ,0 ,0 ,0 ,0]));
+    expect(evaluated).to.eql(Uint8Array.from([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]));
   });
 
   test('stringify 001', async () => {
     const evaluated = await evaluate(
       '$uuidStringify($.id)',
-      {id: [
+      {
+        id: [
           0x6e, 0xc0, 0xbd, 0x7f, 0x11, 0xc0, 0x43, 0xda, 0x97, 0x5e, 0x2a, 0x8a, 0xd9, 0xeb, 0xae, 0x0b,
-        ]}
+        ]
+      }
     );
     expect(evaluated).to.eql("6ec0bd7f-11c0-43da-975e-2a8ad9ebae0b");
   });
