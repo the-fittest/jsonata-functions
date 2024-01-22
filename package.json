@@ -1,6 +1,6 @@
 {
   "name": "jsonata-functions",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "homepage": "https://github.com/the-fittest/jsonata-functions",
   "main": "lib/functions.js",
   "description": "A collection of jsonata functions",
@@ -19,6 +19,7 @@
     "nodemon": "^3.0.2"
   },
   "dependencies": {
+    "@aws-sdk/util-dynamodb": "^3.496.0",
     "jsonata": "^2.0.3",
     "lodash": "^4.17.21",
     "moment": "^2.30.1",
