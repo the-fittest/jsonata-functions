@@ -46,7 +46,7 @@ To only use lodash functions, you can do the following:
 
 ## Tests
 
-`npm test`
+`yarn run test`
 
 ## Publishing
 

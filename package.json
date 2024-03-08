@@ -1,6 +1,6 @@
 {
   "name": "jsonata-functions",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "homepage": "https://github.com/the-fittest/jsonata-functions",
   "main": "lib/functions.js",
   "description": "A collection of jsonata functions",
@@ -26,7 +26,7 @@
     "uuid": "^9.0.1"
   },
   "engines": {
-    "node": "^18.17.1",
+    "node": "^18 || ^20",
     "yarn": "^1.22.19"
   },
   "keywords": [
