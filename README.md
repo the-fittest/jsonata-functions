@@ -58,9 +58,9 @@ To only use lodash functions, you can do the following:
 
 1. `git commit -m "[message]"`
 
-1. `git tag v[version]`
+1. `git tag [version]`
 
-1. `git push origin v[version]`
+1. `git push origin [version]`
 
 1. `npm publish`
 
