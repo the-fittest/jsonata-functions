@@ -1,6 +1,6 @@
 {
   "name": "jsonata-functions",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "homepage": "https://github.com/the-fittest/jsonata-functions",
   "main": "lib/functions.js",
   "description": "A collection of jsonata functions",
@@ -23,17 +23,15 @@
     "jsonata": "2.0.4",
     "lodash": "^4.17.21",
     "moment": "^2.30.1",
+    "underscore.string": "^3.3.6",
     "uuid": "^9.0.1"
-  },
-  "engines": {
-    "node": "^18 || ^20",
-    "yarn": "^1.22.19"
   },
   "keywords": [
     "jsonata",
     "moment",
     "lodash",
     "uuid",
-    "momentjs"
+    "momentjs",
+    "uuid"
   ]
 }

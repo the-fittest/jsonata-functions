@@ -4,7 +4,7 @@ import {evaluate} from "./utils/evaluate.mjs";
 
 describe('Lodash Test Suite', () => {
 
-  test('chunk 001', async () => {
+  test('$_chunk 001', async () => {
     const evaluated = await evaluate(
       '$_chunk($)',
       ['a', 'b', 'c', 'd']
@@ -12,7 +12,7 @@ describe('Lodash Test Suite', () => {
     expect(evaluated).to.eql([['a'], ['b'], ['c'], ['d']]);
   });
 
-  test('chunk 002', async () => {
+  test('$_chunk 002', async () => {
     const evaluated = await evaluate(
       '$_chunk($,2)',
       ['a', 'b', 'c', 'd']
@@ -20,7 +20,7 @@ describe('Lodash Test Suite', () => {
     expect(evaluated).to.eql([['a', 'b'], ['c', 'd']]);
   });
 
-  test('chunk 003', async () => {
+  test('$_chunk 003', async () => {
     const evaluated = await evaluate(
       '$_chunk($,3)',
       ['a', 'b', 'c', 'd']
@@ -28,7 +28,7 @@ describe('Lodash Test Suite', () => {
     expect(evaluated).to.eql([['a', 'b', 'c'], ['d']]);
   });
 
-  test('compact 001', async () => {
+  test('$_compact 001', async () => {
     const evaluated = await evaluate(
       '$_compact($)',
       [0, 1, false, 2, '', 3]
@@ -36,7 +36,7 @@ describe('Lodash Test Suite', () => {
     expect(evaluated).to.eql([1, 2, 3]);
   });
 
-  test('concat 001', async () => {
+  test('$_concat 001', async () => {
     const evaluated = await evaluate(
       '$_concat($, [2,3,4])',
       [1]
@@ -44,7 +44,7 @@ describe('Lodash Test Suite', () => {
     expect(evaluated).to.eql([1, 2, 3, 4]);
   });
 
-  test('concat 002', async () => {
+  test('$_concat 002', async () => {
     const evaluated = await evaluate(
       '$_concat($, [2,[3,4]])',
       [1]
@@ -52,7 +52,7 @@ describe('Lodash Test Suite', () => {
     expect(evaluated).to.eql([1, 2, [3, 4]]);
   });
 
-  test('difference 001', async () => {
+  test('$_difference 001', async () => {
     const evaluated = await evaluate(
       '$_difference($, [2, 3])',
       [2, 1]
@@ -60,7 +60,7 @@ describe('Lodash Test Suite', () => {
     expect(evaluated).to.eql([1]);
   });
 
-  test('differenceBy 001', async () => {
+  test('$_differenceBy 001', async () => {
     const evaluated = await evaluate(
       `$_differenceBy($, [{ 'x': 1 }], 'x')`,
       [{'x': 2}, {'x': 1}]
@@ -68,7 +68,7 @@ describe('Lodash Test Suite', () => {
     expect(evaluated).to.eql([{'x': 2}]);
   });
 
-  test.skip('differenceWith 001', async () => {
+  test.skip('$_differenceBy 001', async () => {
     const evaluated = await evaluate(
       `$_differenceWith($, [{'x': 1, 'y': 2}], _isEqual)`,
       [{'x': 1, 'y': 2}, {'x': 2, 'y': 1}]
@@ -76,7 +76,7 @@ describe('Lodash Test Suite', () => {
     expect(evaluated).to.eql([{'x': 2, 'y': 1}]);
   });
 
-  test('drop 001', async () => {
+  test('$_drop 001', async () => {
     const evaluated = await evaluate(
       `$_drop($)`,
       [1, 2, 3]
@@ -84,7 +84,7 @@ describe('Lodash Test Suite', () => {
     expect(evaluated).to.eql([2, 3]);
   });
 
-  test('drop 002', async () => {
+  test('$_drop 002', async () => {
     const evaluated = await evaluate(
       `$_drop($,2)`,
       [1, 2, 3]
@@ -92,7 +92,7 @@ describe('Lodash Test Suite', () => {
     expect(evaluated).to.eql([3]);
   });
 
-  test('drop 003', async () => {
+  test('$_drop 003', async () => {
     const evaluated = await evaluate(
       `$_drop($,5)`,
       [1, 2, 3]
@@ -100,7 +100,7 @@ describe('Lodash Test Suite', () => {
     expect(evaluated).to.eql([]);
   });
 
-  test('drop 004', async () => {
+  test('$_drop 004', async () => {
     const evaluated = await evaluate(
       `$_drop($,0)`,
       [1, 2, 3]
@@ -108,7 +108,7 @@ describe('Lodash Test Suite', () => {
     expect(evaluated).to.eql([1, 2, 3]);
   });
 
-  test('dropRight 001', async () => {
+  test('$_dropRight 001', async () => {
     const evaluated = await evaluate(
       `$_dropRight($)`,
       [1, 2, 3]
@@ -116,7 +116,7 @@ describe('Lodash Test Suite', () => {
     expect(evaluated).to.eql([1, 2]);
   });
 
-  test('dropRight 002', async () => {
+  test('$_dropRight 002', async () => {
     const evaluated = await evaluate(
       `$_dropRight($,2)`,
       [1, 2, 3]
@@ -124,7 +124,7 @@ describe('Lodash Test Suite', () => {
     expect(evaluated).to.eql([1]);
   });
 
-  test('dropRight 003', async () => {
+  test('$_dropRight 003', async () => {
     const evaluated = await evaluate(
       `$_dropRight($,5)`,
       [1, 2, 3]
@@ -132,7 +132,7 @@ describe('Lodash Test Suite', () => {
     expect(evaluated).to.eql([]);
   });
 
-  test('dropRight 004', async () => {
+  test('$_dropRight 004', async () => {
     const evaluated = await evaluate(
       `$_dropRight($,0)`,
       [1, 2, 3]
@@ -140,7 +140,7 @@ describe('Lodash Test Suite', () => {
     expect(evaluated).to.eql([1, 2, 3]);
   });
 
-  test('head 001', async () => {
+  test('$_head 001', async () => {
     const evaluated = await evaluate(
       `$_head($)`,
       [1, 2, 3]
@@ -148,7 +148,7 @@ describe('Lodash Test Suite', () => {
     expect(evaluated).to.eql(1);
   });
 
-  test('head 002', async () => {
+  test('$_head 002', async () => {
     const evaluated = await evaluate(
       `$_head($)`,
       []
@@ -158,7 +158,7 @@ describe('Lodash Test Suite', () => {
 
   // String
 
-  test('camelCase 001', async () => {
+  test('$_camelCase 001', async () => {
     const evaluated = await evaluate(
       `$_camelCase($)`,
       'Foo Bar'
@@ -166,7 +166,7 @@ describe('Lodash Test Suite', () => {
     expect(evaluated).to.eql('fooBar');
   });
 
-  test('camelCase 002', async () => {
+  test('$_camelCase 002', async () => {
     const evaluated = await evaluate(
       `$_camelCase($)`,
       '--foo-bar--'
@@ -174,7 +174,7 @@ describe('Lodash Test Suite', () => {
     expect(evaluated).to.eql('fooBar');
   });
 
-  test('camelCase 003', async () => {
+  test('$_camelCase 003', async () => {
     const evaluated = await evaluate(
       `$_camelCase($)`,
       '__FOO_BAR__'
@@ -182,7 +182,7 @@ describe('Lodash Test Suite', () => {
     expect(evaluated).to.eql('fooBar');
   });
 
-  test('capitalize 001', async () => {
+  test('$_capitalize 001', async () => {
     const evaluated = await evaluate(
       `$_capitalize($)`,
       'FRED'
@@ -190,7 +190,7 @@ describe('Lodash Test Suite', () => {
     expect(evaluated).to.eql('Fred');
   });
 
-  test('deburr 001', async () => {
+  test('$_deburr 001', async () => {
     const evaluated = await evaluate(
       `$_deburr($)`,
       'déjà vu'
@@ -198,7 +198,7 @@ describe('Lodash Test Suite', () => {
     expect(evaluated).to.eql('deja vu');
   });
 
-  test('endsWith 001', async () => {
+  test('$_endsWith 001', async () => {
     const evaluated = await evaluate(
       `$_endsWith($, 'c')`,
       'abc'
@@ -206,7 +206,7 @@ describe('Lodash Test Suite', () => {
     expect(evaluated).to.eql(true);
   });
 
-  test('endsWith 002', async () => {
+  test('$_endsWith 002', async () => {
     const evaluated = await evaluate(
       `$_endsWith($, 'b')`,
       'abc'
@@ -214,7 +214,7 @@ describe('Lodash Test Suite', () => {
     expect(evaluated).to.eql(false);
   });
 
-  test('endsWith 003', async () => {
+  test('$_endsWith 003', async () => {
     const evaluated = await evaluate(
       `$_endsWith($, 'b', 2)`,
       'abc'
@@ -222,7 +222,7 @@ describe('Lodash Test Suite', () => {
     expect(evaluated).to.eql(true);
   });
 
-  test('escape 001', async () => {
+  test('$_escape 001', async () => {
     const evaluated = await evaluate(
       `$_escape($)`,
       'fred, barney, & pebbles'
@@ -230,7 +230,7 @@ describe('Lodash Test Suite', () => {
     expect(evaluated).to.eql('fred, barney, &amp; pebbles');
   });
 
-  test('escapeRegExp 001', async () => {
+  test('$_escapeRegExp 001', async () => {
     const evaluated = await evaluate(
       `$_escapeRegExp($)`,
       '[lodash](https://lodash.com/)'
@@ -238,7 +238,7 @@ describe('Lodash Test Suite', () => {
     expect(evaluated).to.eql('\\[lodash\\]\\(https://lodash\\.com/\\)');
   });
 
-  test('kebabCase 001', async () => {
+  test('$_kebabCase 001', async () => {
     const evaluated = await evaluate(
       `$_kebabCase($)`,
       'Foo Bar'
@@ -246,7 +246,7 @@ describe('Lodash Test Suite', () => {
     expect(evaluated).to.eql('foo-bar');
   });
 
-  test('kebabCase 002', async () => {
+  test('$_kebabCase 002', async () => {
     const evaluated = await evaluate(
       `$_kebabCase($)`,
       'fooBar'
@@ -254,7 +254,7 @@ describe('Lodash Test Suite', () => {
     expect(evaluated).to.eql('foo-bar');
   });
 
-  test('kebabCase 003', async () => {
+  test('$_kebabCase 003', async () => {
     const evaluated = await evaluate(
       `$_kebabCase($)`,
       '__FOO_BAR__'
@@ -262,7 +262,7 @@ describe('Lodash Test Suite', () => {
     expect(evaluated).to.eql('foo-bar');
   });
 
-  test('lowerCase 001', async () => {
+  test('$_lowerCase 001', async () => {
     const evaluated = await evaluate(
       `$_lowerCase($)`,
       '--Foo-Bar--'
@@ -270,7 +270,7 @@ describe('Lodash Test Suite', () => {
     expect(evaluated).to.eql('foo bar');
   });
 
-  test('lowerCase 002', async () => {
+  test('$_lowerCase 002', async () => {
     const evaluated = await evaluate(
       `$_lowerCase($)`,
       'fooBar'
@@ -278,7 +278,7 @@ describe('Lodash Test Suite', () => {
     expect(evaluated).to.eql('foo bar');
   });
 
-  test('lowerCase 003', async () => {
+  test('$_lowerCase 003', async () => {
     const evaluated = await evaluate(
       `$_lowerCase($)`,
       '__FOO_BAR__'
@@ -286,7 +286,7 @@ describe('Lodash Test Suite', () => {
     expect(evaluated).to.eql('foo bar');
   });
 
-  test('lowerFirst 001', async () => {
+  test('$_lowerFirst 001', async () => {
     const evaluated = await evaluate(
       `$_lowerFirst($)`,
       'Fred'
@@ -294,7 +294,7 @@ describe('Lodash Test Suite', () => {
     expect(evaluated).to.eql('fred');
   });
 
-  test('lowerFirst 002', async () => {
+  test('$_lowerFirst 002', async () => {
     const evaluated = await evaluate(
       `$_lowerFirst($)`,
       'FRED'
@@ -302,7 +302,7 @@ describe('Lodash Test Suite', () => {
     expect(evaluated).to.eql('fRED');
   });
 
-  test('pad 001', async () => {
+  test('$_pad 001', async () => {
     const evaluated = await evaluate(
       `$_pad($,8)`,
       'abc'
@@ -310,7 +310,7 @@ describe('Lodash Test Suite', () => {
     expect(evaluated).to.eql('  abc   ');
   });
 
-  test('pad 002', async () => {
+  test('$_pad 002', async () => {
     const evaluated = await evaluate(
       `$_pad($,8,'_')`,
       'abc'
@@ -318,7 +318,7 @@ describe('Lodash Test Suite', () => {
     expect(evaluated).to.eql('__abc___');
   });
 
-  test('pad 003', async () => {
+  test('$_pad 003', async () => {
     const evaluated = await evaluate(
       `$_pad($,3)`,
       'abc'
@@ -326,7 +326,7 @@ describe('Lodash Test Suite', () => {
     expect(evaluated).to.eql('abc');
   });
 
-  test('padEnd 001', async () => {
+  test('$_padEnd 001', async () => {
     const evaluated = await evaluate(
       `$_padEnd($,8)`,
       'abc'
@@ -334,7 +334,7 @@ describe('Lodash Test Suite', () => {
     expect(evaluated).to.eql('abc     ');
   });
 
-  test('padEnd 002', async () => {
+  test('$_padEnd 002', async () => {
     const evaluated = await evaluate(
       `$_padEnd($,8,'_')`,
       'abc'
@@ -342,7 +342,7 @@ describe('Lodash Test Suite', () => {
     expect(evaluated).to.eql('abc_____');
   });
 
-  test('padEnd 003', async () => {
+  test('$_padEnd 003', async () => {
     const evaluated = await evaluate(
       `$_padEnd($,3)`,
       'abc'
